@@ -1,5 +1,6 @@
 header {
     color: white;
+    text-align: center;
 }
 
 img {
@@ -8,4 +9,12 @@ img {
 
 body {
     background-color: rgb(23, 16, 56);
+}
+
+.img-area {
+    display: flex ;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }

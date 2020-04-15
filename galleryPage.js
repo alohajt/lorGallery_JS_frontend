@@ -29,19 +29,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
 
-            <form id="comment_form">
+            <form class="comment_form" id="${image.id}-comment_form">
                 <input id="comment_input" type="text" name="comment" placeholder="Add Comment"/>
                 <input type="submit" value="Submit"/>
             </form>
-            <ul id="comments">
+            <ul class="comments" id="${image.id}-comments">
 
             </ul>
             `
             imageArea.append(newImageCard)
 
             //add new comment
-            const commentForm = document.getElementById("comment_form")
-            const commentBody = document.getElementById("comments")
+            const commentForm = document.getElementById(`${image.id}-comment_form`)
+            const commentBody = document.getElementById(`${image.id}-comments`)
 
             commentForm.addEventListener('submit', event => {
                 event.preventDefault()

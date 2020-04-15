@@ -17,8 +17,6 @@ function handleGetUsers(){
     .then(console.log)
 }
 
-
-
 function handleLogin(event){
     event.preventDefault()
     // event.target is loginForm
@@ -41,6 +39,11 @@ function handleLogin(event){
         console.log(result.token)
         localStorage.setItem("token", result.token) //in Application > localStorage
     })
+    .then(window.location.replace("http://localhost:3001/galleryPage.html"))
     // wont refresh the page
     event.target.reset() 
+
+    
+
+    
 }
