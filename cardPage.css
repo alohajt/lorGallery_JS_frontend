@@ -1,17 +1,28 @@
+body {
+    background-image: url("https://static.invenglobal.com/upload/image/2020/01/22/i1579710518053578.png");
+    background-size: 60rem;
+    background-repeat: no-repeat;
+}
+
 img {
     max-width: 200px;
 }
 
 .card-image {
     max-height: 200px;
+    position: relative;
+    left: 30%;
 }
 
 .info-box {
     max-height: 200px;
+    position: relative;
+    left: 50%;
+    top: 0.5rem;
 }
 
-.card {
-    display: flex;
-    flex-direction: row;
-    
+.comment_form {
+    position: relative;
+    left: 50%;
+    bottom: 0.2rem;
 }

@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const imageArea = document.querySelector(".img-area")
         const newImageCard = document.createElement("div")
         newImageCard.innerHTML = `
+        <title>${image.name}</title>
         <div class="card">
-            <header>${image.name}</header>
             <div class="card-image">
             <a href="http://localhost:3001/cardPage.html?id=${image.id}"><img src="${image.url}" alt="##" style="width:80%">
             </div>
