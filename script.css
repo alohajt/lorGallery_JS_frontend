@@ -6,13 +6,12 @@ header {
 }
 
 body {
-    background-color: rgb(23, 16, 56);
+    /* background-color: rgb(23, 16, 56); */
     background-image: url("https://images.squarespace-cdn.com/content/58af450eb3db2b0582612f1d/1572805324361-38DOEY2MQ12G2MUFF479/01_splash_screen.png?content-type=image%2Fpng");
-    background-size: 100%;
-    /* background-position: ; */
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
     background-position: 50% 0%;
-
 }
 
 form {

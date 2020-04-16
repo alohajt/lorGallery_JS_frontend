@@ -11,11 +11,17 @@ header {
     z-index: 9999;
 }
 
+
 img {
     max-width: 200px;
     min-width: 180px;
 }
-img:hover {opacity: 0.9;}
+img:hover {
+    /* opacity: 0.9; */
+    transform: scale(1.2); 
+    transition: all 0.15s ease 0s;  
+ 
+}
 
 .card-image {
     margin-top: 3rem;
@@ -24,16 +30,23 @@ img:hover {opacity: 0.9;}
 body {
     background-color: rgb(23, 16, 56);
     background-image: url("https://i.redd.it/9ulemfku64t31.jpg");
-    background-size: auto;
-    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: repeat-y;
 }
 
+.container {
+    position: relative;
+    margin: 0;
+
+}
 .img-area {
     display: flex ;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    margin: 0px;
+
 }
 
 div .card {
@@ -41,6 +54,54 @@ div .card {
     margin: 0.5rem;
 }
 
+/* top nav bar */
+.dropdown{
+    line-height:40px;
+    float:right;
+    width: 200px;
+    text-align: center;
+    /* position: relative;
+    display: inline-block;    */
+    position: absolute;
+    z-index: 1;
+    color: wheat;
+}
+
+.dropdown-content {
+    background-image: url("https://www.pcgamesn.com/wp-content/uploads/2019/10/legends-of-runeterra-explained-900x506.jpg");
+    text-align: center;
+    display: none;
+    min-width: 160px;
+    float:right;
+
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    align-items: center;
+    border-radius: 15px;
+    height: 500px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100px;
+}
+
+button {
+    width: 70px;
+    margin: 0.1rem;
+}
 
 
+.region {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
 
+.mana-cost {
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}

@@ -9,15 +9,20 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(image => singleImageData(image))
 
     function singleImageData(image){
-        const imageArea = document.querySelector(".img-area")
-        const newImageCard = document.createElement("div")
-        newImageCard.innerHTML = `
+        const contentContainer = document.getElementById("content-container")
+        const newCardImage = document.createElement("div")
+        newCardImage.className = "card-image"
+        newCardImage.innerHTML = `
         <title>${image.name}</title>
-        <div class="card">
+        
             <div class="card-image">
-            <a href="http://localhost:3001/cardPage.html?id=${image.id}"><img src="${image.url}" alt="##" style="width:80%">
+            <img src="${image.url}" alt="##" style="width:80%">
             </div>
+        `
 
+        const newCardInfo = document.createElement("div")
+        newCardInfo.className = "card-info"
+        newCardInfo.innerHTML = `
             <div class="info-box">
                 <ul>Region: ${image.region} </ul>
                 <ul>Attack: ${image.attack} </ul>
@@ -26,15 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 <ul>Description: ${image.description}</ul>
                 <ul>Card Type: ${image.cardType}</ul>
             </div>
-        </div>
+        `
+        contentContainer.append(newCardImage, newCardInfo)
 
+        const commentContainer = getElementById("comment-container")
+        const newComment = document.createElement("div")
+        newComment.className = "new-comment"
+        newComment.innerHTML = `
         <form class="comment_form" id="${image.id}-comment_form">
             <input id="comment_input" type="text" name="comment" placeholder="Add Comment"/>
             <input type="submit" value="Submit"/>
         </form>
         <ul class="comments" id="${image.id}-comments"></ul>
         `
-        imageArea.append(newImageCard)
+        commentContainer.append(newComment)
 
         //add new comment(frontend)
         const commentForm = document.getElementById(`${image.id}-comment_form`)
@@ -49,14 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
             commentBody.append(newComment)
 
             //add new comment (backend)
-                // fetch(commentsURL, {
-                //     method:"POST",
-                //     headers:{'Content-Type': 'application/json'},
-                //     body:JSON.stringify({
-                //         image_id: imageId,
-                //         content: newCommentContent
-                //     })
-                // })
+                fetch(commentsURL, {
+                    method:"POST",
+                    headers:{'Content-Type': 'application/json'},
+                    body:JSON.stringify({
+                        image_id: imageId,
+                        content: newCommentContent
+                    })
+                })
                 //===
         })
     }

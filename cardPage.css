@@ -1,28 +1,42 @@
 body {
     background-image: url("https://static.invenglobal.com/upload/image/2020/01/22/i1579710518053578.png");
-    background-size: 60rem;
+    background-size: contain;
     background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 
 img {
     max-width: 200px;
 }
 
-.card-image {
-    max-height: 200px;
+#content-container {
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* align-items: center; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     position: relative;
-    left: 30%;
+    left: 20rem;
+    top: 3rem;
+    /* display: flex; */
+    /* align-content: center; */ 
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
 }
 
-.info-box {
-    max-height: 200px;
-    position: relative;
-    left: 50%;
-    top: 0.5rem;
+.info-box ul {
+    margin:0;
+    width: 150px;
+    color: wheat;
+    font-size: 0.75rem;
 }
 
+#comment-container {
+    align-items: center;
+}
 .comment_form {
-    position: relative;
-    left: 50%;
-    bottom: 0.2rem;
+    align-items: center;
 }
