@@ -1,9 +1,11 @@
+document.addEventListener("DOMContentLoaded", () => {
+
 //login form
 const loginForm = document.querySelector(".login")
 const getUsers = document.querySelector(".get-users")
 
-loginForm.addEventListener("submit", handleLogin);
-getUsers.addEventListener("click", handleGetUsers);
+loginForm.addEventListener("submit", handleLogin)
+getUsers.addEventListener("click", handleGetUsers)
 
 function handleGetUsers(){
     fetch("http://localhost:3000/users", {
@@ -42,8 +44,6 @@ function handleLogin(event){
     .then(window.location.replace("http://localhost:3001/galleryPage.html"))
     // wont refresh the page
     event.target.reset() 
-
-    
-
-    
+ 
 }
+})

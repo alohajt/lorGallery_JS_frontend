@@ -14,43 +14,32 @@ document.addEventListener('DOMContentLoaded', () => {
         
         images.forEach(image => {
             const newImageCard = document.createElement("div")
-            const newImage = document.createElement("img")
+            // const newImage = document.createElement("img")
             // newImage.src = image.url
             // newImage.id = image.id
             newImageCard.innerHTML = `
             <div class="card">
-                <p class="card-title"><a href='#'> card </a></p>
                 <div class="card-image">
-                    <img src="${image.url}" alt="##" style="width:60%">
-                </div>
-                <div class="card-box">
-                    <ul>Region: image.region </ul>
-                    <ul>"attack": 0</ul>
+                    <a href="http://localhost:3001/cardPage.html?id=${image.id}"><img src="${image.url}" alt="##" style="width:80%">
                 </div>
             </div>
-
-            <form class="comment_form" id="${image.id}-comment_form">
-                <input id="comment_input" type="text" name="comment" placeholder="Add Comment"/>
-                <input type="submit" value="Submit"/>
-            </form>
-            <ul class="comments" id="${image.id}-comments">
-
-            </ul>
             `
             imageArea.append(newImageCard)
 
-            //add new comment
-            const commentForm = document.getElementById(`${image.id}-comment_form`)
-            const commentBody = document.getElementById(`${image.id}-comments`)
+            //add new comment(frontend)
+            // const commentForm = document.getElementById(`${image.id}-comment_form`)
+            // const commentBody = document.getElementById(`${image.id}-comments`)
 
-            commentForm.addEventListener('submit', event => {
-                event.preventDefault()
-                const formData = new FormData(commentForm)
-                const newCommentContent = formData.get("comment")
-                newComment = document.createElement("li")
-                newComment.innerText = newCommentContent
-                commentBody.append(newComment)
-            })
+            // commentForm.addEventListener('submit', event => {
+            //     event.preventDefault()
+            //     const formData = new FormData(commentForm)
+            //     const newCommentContent = formData.get("comment")
+            //     newComment = document.createElement("li")
+            //     newComment.innerText = newCommentContent
+            //     commentBody.append(newComment)
+
+                
+            // })
             
         })
     }
