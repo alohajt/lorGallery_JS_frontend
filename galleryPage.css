@@ -55,9 +55,14 @@ body {
 }
 
 /* top nav bar */
+.filter-search {
+    
+}
 .dropdown{
     line-height:40px;
-    float:right;
+    text-align: center;
+    justify-content: center;
+
     width: 200px;
     text-align: center;
     /* position: relative;
@@ -77,8 +82,8 @@ body {
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     z-index: 1;
     align-items: center;
-    border-radius: 15px;
-    height: 550px;
+    border-radius: 10px;
+    height: 700px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -104,4 +109,20 @@ button {
     margin: 0;
     padding: 0;
     height: 50px;
+}
+
+.search-form {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+.search-input {
+    margin: 0;
+    padding: 0;
+    height: 20px;
+}
+
+.region-image {
+    width: 5px;
 }

@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }) 
         }
 
-
         //Shadow Isles filter ShadowIsles
         const shadowIslesButton = document.getElementById("shadow-isles-button")
         shadowIslesButton.addEventListener('click', () => filterShadowIsles(images))
@@ -226,6 +225,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         //======
 
+        //search card
+        const searchForm = document.querySelector(".search-form")
+        searchForm.addEventListener('submit', ()=> searchCard(images))
+
+        function searchCard(images){
+            event.preventDefault()
+            const formData = new FormData(searchForm)
+            const searchInput = formData.get("search-card")
+            // console.log(searchInput.toLowerCase())
+            images.filter(image => {
+                searchInputLowcase = searchInput.toLowerCase()
+                imageNameLowcase = image.name.toLowerCase()
+                if (!imageNameLowcase.includes(searchInputLowcase) ){
+                    const removeImage = document.getElementById(`${image.id}`)
+                    removeImage.style.display = "none"
+                }
+            })
+        }
+                
+
+        
+    
 
 
 
@@ -249,11 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
             //     newComment = document.createElement("li")
             //     newComment.innerText = newCommentContent
             //     commentBody.append(newComment)
-
-                
-            // })
-            
-        // })
     }
 
 })

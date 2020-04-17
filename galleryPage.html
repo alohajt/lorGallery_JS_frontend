@@ -12,9 +12,10 @@
     <!-- <header>Legends of Runeterra Card Gallery</header> -->
     
     <div class="dropdown">
-        <span>Filter</span>
+        <span class="filter-search">Filter & Search</span>
         <div class="dropdown-content">
             <p class="region"> Region </p>
+                <!-- <img class="region-image" src="https://support-legendsofruneterra.riotgames.com/hc/article_attachments/360046311594/icon-demacia.png"> -->
                 <button id="demacia-button">Dermcia</button>
                 <button id="ionia-button">Ionia</button>
                 <button id="freljord-button">Freljord</button>
@@ -35,7 +36,14 @@
                 <button id="cost-8" >Cost 8</button>
                 <button id="cost-9" >Cost 9</button>
             <button class="clear-filter-2">Clear</button>
+            <p class="search">Search</p>
+                <form class="search-form">
+                    <input id="search-input" type="string" name="search-card" placeholder="Any Card Title">
+                    <input type="submit" value="submit">
+                </form>
         </div>
+   
+
     </div>
     
 

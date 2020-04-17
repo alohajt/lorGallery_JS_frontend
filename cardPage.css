@@ -7,7 +7,7 @@ body {
 }
 
 img {
-    max-width: 200px;
+    max-width: 250px;
 }
 
 #content-container {
@@ -28,19 +28,37 @@ img {
 }
 
 .info-box ul {
-    margin:0;
+    margin:0.1rem;
     width: 150px;
     color: wheat;
     font-size: 0.75rem;
+    
 }
 
 #comment-container {
     align-items: center;
     text-align: center;
     position: relative;
-    top: 15%;
+    top: 1%;
     color: wheat;
 }
 .comment_form {
+    align-items: center;
+}
+
+.comments ul {
+    padding: 0%;
+    text-align: center;
+}
+
+
+
+/* #back-arrow-container {
+    text-align: center;
+    
+} */
+
+.back-arrow {
+    width: 50px;
     align-items: center;
 }
