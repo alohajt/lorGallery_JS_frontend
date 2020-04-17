@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
         images.forEach(image => {
             const newImageCard = document.createElement("div")
             newImageCard.innerHTML = `
+            
             <div class="card">
                 <div class="card-image">
-                    <a href="http://localhost:3001/cardPage.html?id=${image.id}"><img id="${image.id}" src="${image.url}" alt="${image.name}" style="width:80%">
+                    <a href="http://localhost:3001/cardPage.html?id=${image.id}"><img id="${image.id}" src="${image.url}" alt="${image.name}"  style="width:80%">
                 </div>
             </div>
             `
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // console.log(images)
             console.log("Demacia working")
             images.filter(function(image){
-                console.log(image.region)
+                // console.log(image.region)
                 if (image.region !== "Demacia"){
                     // console.log(image)
                     // console.log("remove")
@@ -67,8 +68,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images.filter(function(image){
                 if (image.region !== "Ionia"){
                     const removeImage = document.getElementById(`${image.id}`)
-                    console.log(`"${image.id}"`)
-                    console.log(removeImage)
+                    // console.log(`"${image.id}"`)
+                    // console.log(removeImage)
                     removeImage.style.display = "none"    
                 }
             }) 
@@ -83,8 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images.filter(function(image){
                 if (image.region !== "Freljord"){
                     const removeImage = document.getElementById(`${image.id}`)
-                    console.log(`"${image.id}"`)
-                    console.log(removeImage)
+                    // console.log(`"${image.id}"`)
+                    // console.log(removeImage)
                     removeImage.style.display = "none"    
                 }
             }) 
@@ -99,8 +100,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images.filter(function(image){
                 if (image.region !== "Piltover & Zaun"){
                     const removeImage = document.getElementById(`${image.id}`)
-                    console.log(`"${image.id}"`)
-                    console.log(removeImage)
+                    // console.log(`"${image.id}"`)
+                    // console.log(removeImage)
                     removeImage.style.display = "none"    
                 }
             }) 
@@ -114,8 +115,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images.filter(function(image){
                 if (image.region !== "Noxus"){
                     const removeImage = document.getElementById(`${image.id}`)
-                    console.log(`"${image.id}"`)
-                    console.log(removeImage)
+                    // console.log(`"${image.id}"`)
+                    // console.log(removeImage)
                     removeImage.style.display = "none"    
                 }
             }) 
@@ -131,8 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
             images.filter(function(image){
                 if (image.region !== "Shadow Isles"){
                     const removeImage = document.getElementById(`${image.id}`)
-                    console.log(`"${image.id}"`)
-                    console.log(removeImage)
+                    // console.log(`"${image.id}"`)
+                    // console.log(removeImage)
                     removeImage.style.display = "none"    
                 }
             }) 

@@ -36,6 +36,10 @@ img {
 
 #comment-container {
     align-items: center;
+    text-align: center;
+    position: relative;
+    top: 15%;
+    color: wheat;
 }
 .comment_form {
     align-items: center;

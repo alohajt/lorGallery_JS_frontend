@@ -16,5 +16,6 @@ body {
 
 form {
     text-align: center;
-    /* margin-top: 8rem; */
+    position: relative;
+    top:40%;
 }

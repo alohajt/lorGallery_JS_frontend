@@ -14,9 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         newCardImage.className = "card-image"
         newCardImage.innerHTML = `
         <title>${image.name}</title>
-        
             <div class="card-image">
-            <img src="${image.url}" alt="##" style="width:80%">
+                <img src="${image.url}" alt="${image.name}" style="width:80%">
             </div>
         `
 
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `
         contentContainer.append(newCardImage, newCardInfo)
 
-        const commentContainer = getElementById("comment-container")
+        const commentContainer = document.getElementById("comment-container")
         const newComment = document.createElement("div")
         newComment.className = "new-comment"
         newComment.innerHTML = `
@@ -54,19 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
             event.preventDefault()
             const formData = new FormData(commentForm)
             const newCommentContent = formData.get("comment")
-            newComment = document.createElement("li")
-            newComment.innerText = newCommentContent
-            commentBody.append(newComment)
+            commentList = document.createElement("ul")
+            commentList.innerText = newCommentContent
+            commentBody.append(commentList)
 
             //add new comment (backend)
-                fetch(commentsURL, {
-                    method:"POST",
-                    headers:{'Content-Type': 'application/json'},
-                    body:JSON.stringify({
-                        image_id: imageId,
-                        content: newCommentContent
-                    })
-                })
+                // fetch(commentsURL, {
+                //     method:"POST",
+                //     headers:{'Content-Type': 'application/json'},
+                //     body:JSON.stringify({
+                //         image_id: imageId,
+                //         content: newCommentContent
+                //     })
+                // })
                 //===
         })
     }
